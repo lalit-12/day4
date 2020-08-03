@@ -1,10 +1,12 @@
 const $message1 = document.getElementById("submit");
 const $message = document.getElementById("message");
 const $lives = document.getElementById("lives");
-var guessno = Math.floor(Math.random() * 100);
+var guessno = Math.floor(Math.random() * 10);
 var lives = 10;
 var message;
+
 $message1.onclick = () => {
+  console.log(guessno);
   let userinput = document.getElementById("number-input").value;
   lives--;
   if (userinput == guessno) {
